@@ -1,0 +1,72 @@
+$icon-font-path: "../../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+$fa-font-path: "../../node_modules/@fortawesome/fontawesome-free/webfonts/";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        li {
+            a {
+                text-align: center;
+            }
+        }
+    }
+}
+
+//Customer page
+.customerlogo {
+    background-image: url(../components/img/customer-logo.png);
+    height: 200px;
+    position: relative;
+    margin-bottom: 15px;
+    background-position: 30% 4%;
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    &--manager {
+        background-image: url(../components/img/manager.jpg);
+    }
+
+    &--worker {
+        background-image: url(../components/img/worker.jpg);
+    }
+}
+
+@media (min-width: 768px) {
+    .customerlogo {
+        height: 300px;
+        margin-bottom:50px;
+        background-position: 50% 4%;
+
+    }
+}
+
+.customer-c-mod {
+    display: flex;
+    justify-content: center;
+}
+
+.control-label {
+    &.col-sm-12 {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
