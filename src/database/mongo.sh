@@ -24,10 +24,10 @@ docker run --detach --network $MONGO_NETWORK_NAME --ip $MONGO_HOST_IP mongo
 
 chmod +r jsons/*.json
 
-mongoimport --host $MONGO_HOST_IP --db webtech_2_assignment --collection shutter_colors --file jsons/shutter_colors.json --jsonArray
-mongoimport --host $MONGO_HOST_IP --db webtech_2_assignment --collection shutter_materials --file jsons/shutter_materials.json --jsonArray
-mongoimport --host $MONGO_HOST_IP --db webtech_2_assignment --collection shutter_types --file jsons/shutter_types.json --jsonArray
-mongoimport --host $MONGO_HOST_IP --db webtech_2_assignment --collection orders --file jsons/orders.json --jsonArray
+mongoimport --host $MONGO_HOST_IP --db WT2_Nyitrai_Balazs_PXCZCK --collection shutter_colors --file json/shutter_colors.json --jsonArray
+mongoimport --host $MONGO_HOST_IP --db WT2_Nyitrai_Balazs_PXCZCK --collection shutter_materials --file json/shutter_materials.json --jsonArray
+mongoimport --host $MONGO_HOST_IP --db WT2_Nyitrai_Balazs_PXCZCK --collection shutter_types --file json/shutter_types.json --jsonArray
+mongoimport --host $MONGO_HOST_IP --db WT2_Nyitrai_Balazs_PXCZCK --collection orders --file json/orders.json --jsonArray
 
 
 mongo --host $MONGO_HOST_IP
