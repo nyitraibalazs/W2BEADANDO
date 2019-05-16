@@ -1,0 +1,37 @@
+[{
+	"_id": {
+		"$oid": "5cd1799631d75331588dc9b2"
+	},
+	"color": "blue"
+},
+{
+	"_id": {
+		"$oid": "5cd1799631d75331588dc9b3"
+	},
+	"color": "bloack"
+},
+{
+	"_id": {
+		"$oid": "5cd1799631d75331588dc9b4"
+	},
+	"color": "red"
+},
+{
+	"_id": {
+		"$oid": "5cd1799631d75331588dc9b5"
+	},
+	"color": "yellow"
+},
+{
+	"_id": {
+		"$oid": "5cd1799631d75331588dc9b6"
+	},
+	"color": "green"
+},
+{
+	"_id": {
+		"$oid": "5cd1799631d75331588dc9b7"
+	},
+	"color": "purple"
+}]
+

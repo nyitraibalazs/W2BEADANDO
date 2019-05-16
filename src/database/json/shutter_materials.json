@@ -1,0 +1,19 @@
+[{
+	"_id": {
+		"$oid": "5cd1799731d75331588dc9ba"
+	},
+	"material": "aluminium"
+},
+{
+	"_id": {
+		"$oid": "5cd1799731d75331588dc9bb"
+	},
+	"material": "metal"
+},
+{
+	"_id": {
+		"$oid": "5cd1799731d75331588dc9bc"
+	},
+	"material": "plastic"
+}]
+

@@ -13,18 +13,22 @@
 #	- http://guyharrison.squarespace.com/blog/2015/3/23/sakila-sample-schema-in-mongodb.html
 #	- https://medium.com/dbkoda/mongodb-sample-collections-52d6a7745908
 #
-# Created: 2019-05-01
+# Created: 2019-05-01s
 
 MONGO_HOST_IP=172.21.0.10
 MONGO_NETWORK_MASK=172.21.0.0/16
 MONGO_NETWORK_NAME=mongodb-network
 
 docker network create -d bridge --subnet $MONGO_NETWORK_MASK $MONGO_NETWORK_NAME
-
 docker run --detach --network $MONGO_NETWORK_NAME --ip $MONGO_HOST_IP mongo
 
-mongoimport --host $MONGO_HOST_IP --db WT2_Nyitrai_Balazs_PXCZCK --collection shutters shutters.json
-mongoimport --host $MONGO_HOST_IP --db WT2_Nyitrai_Balazs_PXCZCK --collection orders orders.json
+chmod +r jsons/*.json
+
+mongoimport --host $MONGO_HOST_IP --db webtech_2_assignment --collection shutter_colors --file jsons/shutter_colors.json --jsonArray
+mongoimport --host $MONGO_HOST_IP --db webtech_2_assignment --collection shutter_materials --file jsons/shutter_materials.json --jsonArray
+mongoimport --host $MONGO_HOST_IP --db webtech_2_assignment --collection shutter_types --file jsons/shutter_types.json --jsonArray
+mongoimport --host $MONGO_HOST_IP --db webtech_2_assignment --collection orders --file jsons/orders.json --jsonArray
+
 
 mongo --host $MONGO_HOST_IP
 

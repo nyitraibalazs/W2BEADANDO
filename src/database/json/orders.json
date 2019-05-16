@@ -1,0 +1,75 @@
+[{
+	"_id": {
+		"$oid": "5cd1799865d75331588dc9bd"
+	},
+	"customerData": {
+		"name": "Nyitrai Balázs",
+		"email": "nyitraibalazs.h@mail.com",
+		"address": "3525 Msikolc Jazmin utca 51."
+	},
+	"invoice": {
+		"price": 200000,
+		"isPaid": true
+	},
+	"comment": "",
+	"isInstalled": true,
+	"windows": [
+		{
+			"width": 200,
+			"height": 200,
+			"shutter": {
+				"seqNo": 1,
+				"color": "white",
+				"material": "plastic",
+				"type": "basic",
+				"parts": [
+					{
+						"count": 50,
+						"description": "Test3"
+					},
+					{
+						"count": 6,
+						"description": "Test4"
+					}
+				],
+				"isFinished": true
+			}
+		}
+	]
+},
+{
+	"_id": {
+		"$oid": "5cd1791231d75331588dc9be"
+	},
+	"customerData": {
+		"name": "Emese Ut",
+		"email": "emesee@mail.com",
+		"address": "6421 Miskolc Egyetemvaros"
+	},
+	"comment": "",
+	"isInstalled": false,
+	"windows": [
+		{
+			"width": 300,
+			"height": 300,
+			"shutter": {
+				"id": 2,
+				"color": "white",
+				"material": "plastic",
+				"type": "basic",
+				"parts": [
+					{
+						"count": 70,
+						"description": "Test"
+					},
+					{
+						"count": 2,
+						"description": "Test1"
+					}
+				],
+				"isFinished": false
+			}
+		}
+	]
+}]
+
