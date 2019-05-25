@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://localhost:27017";
+const url = 'mongodb://172.21.0.10:27017';
 const dbName = 'WT2_Nyitrai_Balazs_PXCZCK';    
 
 var databaseConnection;
