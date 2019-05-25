@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const getDatabaseConnection = require('./DatabaseConnection').getDatabaseConnection;
+const getDatabaseConnection = require('../database/DatabaseConnection').getDatabaseConnection;
 
 async function getAllShutterColors(successCallback, errorCallback) {
     const db = await getDatabaseConnection();

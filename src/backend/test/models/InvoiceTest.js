@@ -1,5 +1,5 @@
 const assert = require('assert');
-const InvoiceClass = require('../../Invoice');
+const InvoiceClass = require('../../undef/Invoice');
 
 describe('Invoice class tests', () => {
     it('test InvoiceFromJson with undefined', () => {

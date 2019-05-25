@@ -12,7 +12,7 @@ function ShutterDataService(shutterDataDao) {
     if(shutterDataDao !== undefined) {
         this.shutterDataDao = shutterDataDao;
     } else {
-        this.shutterDataDao = require('./ShutterDataDao');
+        this.shutterDataDao = require('../dao/ShutterDataDao');
     }
 }
 

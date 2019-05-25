@@ -1,5 +1,5 @@
 const assert = require('assert');
-const ShutterClass = require('../../Shutter');
+const ShutterClass = require('../../undef/Shutter');
 
 describe('Shutter class tests', () => {
     it('test ShutterFromJson with undefined', () => {

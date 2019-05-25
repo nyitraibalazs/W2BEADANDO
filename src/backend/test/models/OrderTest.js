@@ -1,5 +1,5 @@
 const assert = require('assert');
-const OrderClass = require('../../Order');
+const OrderClass = require('../../undef/Order');
 
 describe('Order class tests', () => {
     it('test OrderFromJson with undefined', () => {

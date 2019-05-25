@@ -21,7 +21,7 @@ export class IndexCustomer extends Component {
         return (
             <React.Fragment>
                 <div className="customerlogo">
-                   <h1>Shop - Entering</h1>
+                   <h1>Shop - </h1>
                 </div>
                     <div className="customer-c-mod">
                          <div className="container-fluid">

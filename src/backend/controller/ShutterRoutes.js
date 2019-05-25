@@ -1,6 +1,6 @@
 const routes = require("express").Router();
 
-var ShutterDataService = require("./ShutterDataService");
+var ShutterDataService = require("../service/ShutterDataService");
 const shutterDataService = new ShutterDataService();
 
 routes.get("/getAllShutterMaterials", (req, resp) => {

@@ -1,5 +1,5 @@
 const assert = require('assert');
-const CustomerDataClass = require('../../CustomerData');
+const CustomerDataClass = require('../../undef/CustomerData');
 
 describe('CustomerData class tests', () => {
     it('test CustomerDataFromJson with undefined', () => {

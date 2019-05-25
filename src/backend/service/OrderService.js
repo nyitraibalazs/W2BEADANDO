@@ -4,7 +4,7 @@ function OrderService(orderDao) {
     if(orderDao !== undefined) {
         this.orderDao = orderDao;
     } else {
-        this.orderDao = require('./OrderDao');
+        this.orderDao = require('../dao/OrderDao');
     }
 }
 

@@ -3,9 +3,9 @@ const path = require('path');
 const bodyParser = require("body-parser");
 
 
-const orderController = require("./routes").routes;
-const shutterDataController = require("./ShutterRoutes").routes;
-const initDatabase = require('./InitDatabase').initDatabase;
+const orderController = require("./routes/routes").routes;
+const shutterDataController = require("./controller/ShutterRoutes").routes;
+const initDatabase = require('./database/InitDatabase').initDatabase;
 
 
 var app = express();

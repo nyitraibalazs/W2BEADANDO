@@ -1,7 +1,7 @@
 const ObjectID = require('mongodb').ObjectID;
 const assert = require('assert');
 
-const getDatabaseConnection = require('./DatabaseConnection').getDatabaseConnection;
+const getDatabaseConnection = require('../database/DatabaseConnection').getDatabaseConnection;
 const collectionName = 'orders'
 
 async function getOrders(FunctionSucces, errorCallback) {

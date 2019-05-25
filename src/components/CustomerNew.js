@@ -5,8 +5,17 @@ export class CustomerNew extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {order: {comment: "", windows: []},
-            error: {windowsSize: undefined, order: {windows: []}}
+        this.state = {
+            order: {
+                comment: "",
+                windows: []
+            },
+            error: {
+            windowsSize: undefined,
+                order: {
+                windows: []
+            }
+        }
         };
     }
 
@@ -31,7 +40,13 @@ export class CustomerNew extends Component {
             }
         }
 
-        this.setState((prevState) => ({...prevState, order: {...prevState.order, windows: [...prevState.order.windows, newWindow]},
+        this.setState((prevState) => ({
+            ...prevState,
+            order: {...prevState.order,
+                windows:
+                   [...prevState.order.windows,
+                       newWindow]
+            },
             error: {...prevState.error, windowsSize: false, order: {...prevState.error.order, windows: [...prevState.error.order.windows, newWindowError]}}
         }))
     }

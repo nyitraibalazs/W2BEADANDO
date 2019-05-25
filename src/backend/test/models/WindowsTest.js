@@ -1,5 +1,5 @@
 const assert = require('assert');
-const WindowClass = require('../../Window');
+const WindowClass = require('../../undef/Window');
 
 describe('Windows class tests', () => {
     it('test WindowFromJson with undefined', () => {
