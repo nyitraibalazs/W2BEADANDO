@@ -5,7 +5,6 @@ const bodyParser = require("body-parser");
 
 const orderController = require("./controller/OrderRoutes").routes;
 const shutterDataController = require("./controller/ShutterRoutes").routes;
-const initDatabase = require('./database/InitDatabase').initDatabase;
 
 
 var app = express();
@@ -17,7 +16,6 @@ app.use(function(req, res, next) {
 
 app.use('/order/', orderController);
 app.use('/shutter-data/', shutterDataController);
-initDatabase();
 
 app.use(express.static('build'));
 app.get('/', function(req, res) {
