@@ -7,23 +7,23 @@ import { ManagerPage } from "./client/componens/manager/ManagerPage"
 class App extends Component {
    render() {
       return (
-         <div id="shutterGutterApp">
+         <div>
             <HashRouter>
                <div>
-                  <nav className="navbar navbar-default" id="my-navbar">
+                  <nav className="navbar navbar-dark bg-default navbar-expand-lg">
                      <div className="container-fluid">
                         <div className="navbar-header">
-                           <div className="navbar-brand">ShutterGlutter</div>
+                           <div className="navbar-brand">Nyitrai Balázs</div>
                         </div>
                         <ul className="nav navbar-nav">
                            <li>
-                              <NavLink to="/customer" activeClassName="active-nav-link"><i className="fas fa-user" />Costumer page</NavLink>
+                              <NavLink to="/customer" activeClassName="active-nav-link">Costumer page</NavLink>
                            </li>
                            <li>
-                              <NavLink to="/worker" activeClassName="active-nav-link"><i className="fas fa-hard-hat" />Worker page</NavLink>
+                              <NavLink to="/worker" activeClassName="active-nav-link">Worker page</NavLink>
                            </li>
                            <li>
-                              <NavLink to="/manager" activeClassName="active-nav-link"><i className="fas fa-user-tie" />Manager page</NavLink>
+                              <NavLink to="/manager" activeClassName="active-nav-link">Manager page</NavLink>
                            </li>
                         </ul>
                      </div>

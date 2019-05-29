@@ -8,7 +8,7 @@
 	"_id": {
 		"$oid": "5cd1799731d75331688dc9bb"
 	},
-	"material": "metal"
+	"material": "metaltest"
 },
 {
 	"_id": {

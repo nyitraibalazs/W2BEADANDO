@@ -36,26 +36,33 @@ export class CustomerPage extends Component {
    render() {
       return (
          <React.Fragment>
-            <div className="container-fluid">
+            <div className="container-fluid customerlogo">
 
-               <div className="text-center header-text">
-                  <h1>
-                     Customer page
-                     {this.state.customerData !== undefined &&
-                     <span>
-                                    &nbsp;
-                        <i className="header-icon fas fa-sync" onClick={() => {CostumerDataActions.refreshCostumerOwnOrders();}} />
-                        &nbsp;
-                        <i className="header-icon fas fa-sign-out-alt" onClick={() => {CostumerDataActions.unsetCostumerData();}} />
-                                </span>
-                     }
-                  </h1>
+               <div className="row">
+                  <div className="text-center header-text">
+                     <h1>
+                        Enter the Shop
+                        {this.state.customerData !== undefined &&
+                        <span>
+                                       &nbsp;
+                           <i className="header-icon fas fa-sync" onClick={() => {CostumerDataActions.refreshCostumerOwnOrders();}} />
+                           &nbsp;
+                           <i className="header-icon fas fa-sign-out-alt" onClick={() => {CostumerDataActions.unsetCostumerData();}} />
+                                   </span>
+                        }
+                     </h1>
+
+                     <h1>Login:</h1>
+                  </div>
+
+                  <div className="customerpage__login row">
+                  {
+                     (this.state.customerData === undefined)
+                        ? <CustomerForm />
+                        : <CustomerMainPage customerData={this.state.customerData} ownOrders={this.state.ownOrders} />
+                  }
+                  </div>
                </div>
-               {
-                  (this.state.customerData === undefined)
-                     ? <CustomerForm />
-                     : <CustomerMainPage customerData={this.state.customerData} ownOrders={this.state.ownOrders} />
-               }
             </div>
          </React.Fragment>
       )

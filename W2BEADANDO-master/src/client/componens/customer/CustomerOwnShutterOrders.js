@@ -5,7 +5,6 @@ export class CustomerOwnShutterOrders extends Component {
    render() {
       return (
          <div>
-            <h2>Own orders ({this.props.customerData.email})</h2>
             <ul className="list-group">
                {
                   this.props.ownOrders.length === 0 &&
@@ -16,7 +15,7 @@ export class CustomerOwnShutterOrders extends Component {
                      <li key={i} className="list-group-item">
 
                         <div className="row">
-                           <div className="col-sm-6">
+                           <div className="col-sm-12">
                               <div>
                                  <div>
                                     <h3>Order id:</h3>
@@ -25,18 +24,9 @@ export class CustomerOwnShutterOrders extends Component {
                                     {order._id}
                                  </div>
                               </div>
-
-                              <div>
-                                 <div>
-                                    <h3>Comment:</h3>
-                                 </div>
-                                 <div className={"comment-field"}>
-                                    {order.comment}
-                                 </div>
-                              </div>
                            </div>
 
-                           <div className="col-sm-6">
+                           <div className="col-sm-12">
                               <div>
                                  <div>
                                     <h3>Shutters:</h3>

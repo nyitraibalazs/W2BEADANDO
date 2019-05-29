@@ -77,12 +77,7 @@ export class WorkerPage extends Component {
             </div>
 
             <div>
-               <h2>All orders</h2>
-               <div className="checkbox">
-                  <label><input type="checkbox" value={this.state.filterUnfinished} onChange={this.toggleFilterUnfinished} />Show only unassembled orders</label>
-               </div>
-
-               <ul className="list-group">
+              <ul className="list-group ">
                   {
                      this.state.allOrders.length === 0 &&
                      <div>Sorry no orders yet</div>
@@ -107,7 +102,7 @@ export class WorkerPage extends Component {
                            <li key={i} className="list-group-item">
 
                               <div className="row">
-                                 <div className="col-sm-6">
+                                 <div className="col-sm-12">
                                     <div>
                                        <div>
                                           <h3>Order id:</h3>
@@ -116,17 +111,8 @@ export class WorkerPage extends Component {
                                           {order._id}
                                        </div>
                                     </div>
-
-                                    <div>
-                                       <div>
-                                          <h3>Comment:</h3>
-                                       </div>
-                                       <div className={"comment-field"}>
-                                          {order.comment}
-                                       </div>
-                                    </div>
                                  </div>
-                                 <div className="col-sm-6">
+                                 <div className="col-sm-12">
                                     <div>
                                        <div>
                                           <h3>Shutters:</h3>

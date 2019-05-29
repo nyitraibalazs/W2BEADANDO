@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb://localhost:27017';
-const dbName = 'WT2_PXCZCK';
+const dbName = 'TesztMONGODB';
 
 var databaseConnection;
 

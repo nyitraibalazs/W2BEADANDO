@@ -30,14 +30,44 @@ $fa-font-path: "../../node_modules/@fortawesome/fontawesome-free/webfonts/";
         justify-content: center;
         text-decoration: underline;
         font-weight: bold;
-    }
-
-    &--manager {
-    }
-
-    &--worker {
+        text-transform: uppercase;
     }
 }
+
+
+
+.customerpage {
+    &__login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .control-label {
+            font-size: 16px;
+        }
+
+        .error-desc {
+            display: none;
+        }
+
+        /*button {
+            position: absolute;
+            left: 340px;
+            top: -125px;
+            width: 200px;
+            height: 50px;
+            box-shadow: 1px -1px 14px 0 rgba(0,0,0,0.48);
+            background-color: white;
+            color: black;
+
+            &:hover {
+                background-color: #1b6d85;
+                color: white;
+            }
+        }*/
+    }
+}
+
 
 @media (min-width: 768px) {
     .customerlogo {

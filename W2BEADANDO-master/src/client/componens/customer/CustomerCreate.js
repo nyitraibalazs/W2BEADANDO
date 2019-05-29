@@ -448,8 +448,7 @@ export class CustomerCreate extends Component {
 
    render() {
       return (
-
-         <form  onSubmit={(e) => this.saveForm(e)}>
+         <form className="col-sm-12" onSubmit={(e) => this.saveForm(e)}>
             <h2>Create order</h2>
             <div>
                <div>
@@ -562,13 +561,7 @@ export class CustomerCreate extends Component {
                                  </div>
                               </td>
                               <td>
-                                 <div className={ this.state.error.order.windows[i].shutter.material === true
-                                    ? "form-group has-error"
-                                    : this.state.error.order.windows[i].shutter.material === false
-                                       ? "form-group has-success"
-                                       : "form-group"
-                                 }
-                                 >
+
                                     <select
                                        className="form-control"
                                        value={window.shutter.material}
@@ -585,16 +578,9 @@ export class CustomerCreate extends Component {
                                        this.state.error.order.windows[i].shutter.material &&
                                        <div className="error-desc">Invalid value!</div>
                                     }
-                                 </div>
+
                               </td>
                               <td>
-                                 <div className={ this.state.error.order.windows[i].shutter.type === true
-                                    ? "form-group has-error"
-                                    : this.state.error.order.windows[i].shutter.type === false
-                                       ? "form-group has-success"
-                                       : "form-group"
-                                 }
-                                 >
                                     <select
                                        className="form-control"
                                        value={window.shutter.type}
@@ -611,7 +597,6 @@ export class CustomerCreate extends Component {
                                        this.state.error.order.windows[i].shutter.type &&
                                        <div className="error-desc">Invalid value!</div>
                                     }
-                                 </div>
                               </td>
                               <td>
                                  <button
@@ -627,7 +612,7 @@ export class CustomerCreate extends Component {
                      }
 
                      <tr className="my-tr-row">
-                        <td colSpan={6}>
+                        <td colSpan={2}>
                            <button
                               type="button"
                               className="btn btn-primary btn-block"
@@ -643,17 +628,7 @@ export class CustomerCreate extends Component {
             </div>
 
             <div className="form-group">
-               <label>Comment:</label>
-               <textarea
-                  className="form-control"
-                  rows="5"
-                  value={this.state.order.comment}
-                  onChange={this.handleCommentChange}
-               />
-            </div>
-
-            <div className="form-group">
-               <button type="submit" className="btn btn-primary">Submit</button>
+               <button type="submit" className="btn btn-primary">Send</button>
             </div>
          </form>
       )
