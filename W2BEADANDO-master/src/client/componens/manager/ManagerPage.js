@@ -130,15 +130,6 @@ export class ManagerPage extends Component {
                                        <div className="col-sm-12">
                                           <div>
                                              <div>
-                                                <h3>Order id:</h3>
-                                             </div>
-                                             <div>
-                                                {order._id}
-                                             </div>
-                                          </div>
-
-                                          <div>
-                                             <div>
                                                 <h3>Customer data:</h3>
                                              </div>
                                              <div>

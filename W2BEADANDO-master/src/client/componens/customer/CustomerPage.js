@@ -42,14 +42,6 @@ export class CustomerPage extends Component {
                   <div className="text-center header-text">
                      <h1>
                         Enter the Shop
-                        {this.state.customerData !== undefined &&
-                        <span>
-                                       &nbsp;
-                           <i className="header-icon fas fa-sync" onClick={() => {CostumerDataActions.refreshCostumerOwnOrders();}} />
-                           &nbsp;
-                           <i className="header-icon fas fa-sign-out-alt" onClick={() => {CostumerDataActions.unsetCostumerData();}} />
-                                   </span>
-                        }
                      </h1>
 
                      <h1>Login:</h1>

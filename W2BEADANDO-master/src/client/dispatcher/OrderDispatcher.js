@@ -21,13 +21,13 @@ dispatcher.register((data) => {
       return;
    }
 
-   axios.post("http://localhost:8080/order/createOrder", {
+   axios.post("/order/createOrder", {
       "order": data.action.payload
    })
       .then((response) => {
 
          let id = response.data.createdId;
-         axios.post("http://localhost:8080/order/getOrderById", {
+         axios.post("/order/getOrderById", {
             "orderId": id
          })
             .then((response) => {
@@ -45,7 +45,7 @@ dispatcher.register((data) => {
       return;
    }
 
-   axios.get("http://localhost:8080/order/getOrders")
+   axios.get("/order/getOrders")
       .then((response) => {
          OrderStore._allOrders = response.data.orders;
          OrderStore._isAllOrdersFecthed = true;
@@ -58,7 +58,7 @@ dispatcher.register((data) => {
       return;
    }
 
-   axios.post("http://localhost:8080/order/finishShutter", {
+   axios.post("/order/finishShutter", {
       "orderId": data.action.payload.orderId,
       "shutterId": data.action.payload.shutterId
    })
@@ -98,7 +98,7 @@ dispatcher.register((data) => {
       return;
    }
 
-   axios.post("http://localhost:8080/order/finishInstallation", {
+   axios.post("/order/finishInstallation", {
       "orderId": data.action.payload
    })
       .then((response) => {
@@ -129,7 +129,7 @@ dispatcher.register((data) => {
       return;
    }
 
-   axios.post("http://localhost:8080/order/createInvoiceForOrder", {
+   axios.post("/order/createInvoiceForOrder", {
       "orderId": data.action.payload.orderId,
       "invoice": data.action.payload.invoice
    })

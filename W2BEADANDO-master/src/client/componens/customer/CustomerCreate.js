@@ -452,13 +452,7 @@ export class CustomerCreate extends Component {
             <h2>Create order</h2>
             <div>
                <div>
-                  <h3>Shutters
-                     {
-                        this.state.error.windowsSize === true &&
-                        <span className="error-desc">(min 1 needed)</span>
-                     }
-                     :
-                  </h3>
+                  <h3>Shutters</h3>
                </div>
                <div>
                   <table className="table">

@@ -1,0 +1,74 @@
+[{
+	"_id": {
+		"$oid": "5cd1799831d75331588dc9bd"
+	},
+	"customerData": {
+		"name": "Kis Pál",
+		"email": "kispal@mail.com",
+		"address": "3525 Msikolc Hősök tere 1."
+	},
+	"invoice": {
+		"price": 149000,
+		"isPaid": true
+	},
+	"comment": "No comment",
+	"isInstalled": true,
+	"windows": [
+		{
+			"width": 200,
+			"height": 300,
+			"shutter": {
+				"seqNo": 1,
+				"color": "white",
+				"material": "plastic",
+				"type": "basic",
+				"parts": [
+					{
+						"count": 30,
+						"description": "200mm wide, white plastic rod"
+					},
+					{
+						"count": 2,
+						"description": "Rope"
+					}
+				],
+				"isFinished": true
+			}
+		}
+	]
+},
+	{
+		"_id": {
+			"$oid": "5cd1799831d75331588dc9be"
+		},
+		"customerData": {
+			"name": "Kis Pál",
+			"email": "kispal@mail.com",
+			"address": "3525 Msikolc Hősök tere 1."
+		},
+		"comment": "No comment",
+		"isInstalled": false,
+		"windows": [
+			{
+				"width": 200,
+				"height": 300,
+				"shutter": {
+					"id": 2,
+					"color": "white",
+					"material": "plastic",
+					"type": "basic",
+					"parts": [
+						{
+							"count": 30,
+							"description": "200mm wide, white plastic rod"
+						},
+						{
+							"count": 2,
+							"description": "Rope"
+						}
+					],
+					"isFinished": false
+				}
+			}
+		]
+	}]

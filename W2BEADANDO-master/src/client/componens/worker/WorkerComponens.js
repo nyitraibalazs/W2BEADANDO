@@ -105,16 +105,6 @@ export class WorkerPage extends Component {
                                  <div className="col-sm-12">
                                     <div>
                                        <div>
-                                          <h3>Order id:</h3>
-                                       </div>
-                                       <div>
-                                          {order._id}
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div className="col-sm-12">
-                                    <div>
-                                       <div>
                                           <h3>Shutters:</h3>
                                        </div>
                                        <div>

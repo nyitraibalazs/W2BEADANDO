@@ -22,12 +22,12 @@ MONGO_NETWORK_NAME=mongodb-network
 docker network create -d bridge --subnet $MONGO_NETWORK_MASK $MONGO_NETWORK_NAME
 docker run --detach --network $MONGO_NETWORK_NAME --ip $MONGO_HOST_IP mongo
 
-chmod +r jsons/*.json
+chmod +r *.json
 
-mongoimport --host $MONGO_HOST_IP --db WT2_Nyitrai_Balazs_PXCZCK --collection shutter_colors --file json/shutter_colors.json --jsonArray
-mongoimport --host $MONGO_HOST_IP --db WT2_Nyitrai_Balazs_PXCZCK --collection shutter_materials --file json/shutter_materials.json --jsonArray
-mongoimport --host $MONGO_HOST_IP --db WT2_Nyitrai_Balazs_PXCZCK --collection shutter_types --file json/shutter_types.json --jsonArray
-mongoimport --host $MONGO_HOST_IP --db WT2_Nyitrai_Balazs_PXCZCK --collection orders --file json/orders.json --jsonArray
+mongoimport --host $MONGO_HOST_IP --db TesztMONGODB --collection shutter_colors --file shutter_colors.json --jsonArray
+mongoimport --host $MONGO_HOST_IP --db TesztMONGODB --collection shutter_materials --file shutter_materials.json --jsonArray
+mongoimport --host $MONGO_HOST_IP --db TesztMONGODB --collection shutter_types --file shutter_types.json --jsonArray
+mongoimport --host $MONGO_HOST_IP --db TesztMONGODB --collection orders --file orders.json --jsonArray
 
 
 mongo --host $MONGO_HOST_IP

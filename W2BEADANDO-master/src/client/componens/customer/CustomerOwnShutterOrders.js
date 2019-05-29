@@ -15,18 +15,7 @@ export class CustomerOwnShutterOrders extends Component {
                      <li key={i} className="list-group-item">
 
                         <div className="row">
-                           <div className="col-sm-12">
-                              <div>
-                                 <div>
-                                    <h3>Order id:</h3>
-                                 </div>
-                                 <div>
-                                    {order._id}
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div className="col-sm-12">
+                          <div className="col-sm-12">
                               <div>
                                  <div>
                                     <h3>Shutters:</h3>

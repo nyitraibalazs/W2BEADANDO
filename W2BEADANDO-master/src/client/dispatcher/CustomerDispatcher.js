@@ -20,7 +20,7 @@ dispatcher.register((data) => {
       return;
    }
 
-   axios.post("http://localhost:8080/order/getOrdersByEmail", {
+   axios.post("/order/getOrdersByEmail", {
       "email": data.action.payload.email
    })
       .then((response) => {
@@ -47,7 +47,7 @@ dispatcher.register((data) => {
       return;
    }
 
-   axios.post("http://localhost:8080/order/getOrdersByEmail", {
+   axios.post("/order/getOrdersByEmail", {
       "email": CustomerStore._costumerData.email
    })
       .then((response) => {
