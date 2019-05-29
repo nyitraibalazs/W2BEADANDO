@@ -113,24 +113,7 @@ export class ManagerPage extends Component {
                </div>
 
                <div>
-                  <h2>All orders</h2>
-                  <div>
-                     <label>Filter:</label>
-                     <select
-                        className="form-control"
-                        value={this.state.filter}
-                        onChange={(event) => this.setFilter(event)}
-                     >
-                        <option value={""}>Show all</option>
-                        <option value={"UNASSEMBLED"}>Show only unassembled</option>
-                        <option value={"ASSEMBLED"}>Show only assembled</option>
-                        <option value={"INSTALLED"}>Show only installed</option>
-                        <option value={"UNPAID"}>Show only unpaid</option>
-                        <option value={"PAID"}>Show only paid</option>
-                     </select>
-                  </div>
-
-                  <ul className="list-group margin-top-30">
+                 <ul className="list-group margin-top-30">
                      {
                         this.state.allOrders.length === 0 &&
                         <div>Sorry no orders yet</div>
@@ -144,7 +127,7 @@ export class ManagerPage extends Component {
                                  return <li key={i} className="list-group-item">
 
                                     <div className="row">
-                                       <div className="col-sm-6">
+                                       <div className="col-sm-12">
                                           <div>
                                              <div>
                                                 <h3>Order id:</h3>
@@ -164,18 +147,9 @@ export class ManagerPage extends Component {
                                                 <div><label className="details-label">Address: </label>{order.customerData.address}</div>
                                              </div>
                                           </div>
-
-                                          <div>
-                                             <div>
-                                                <h3>Comment:</h3>
-                                             </div>
-                                             <div className={"comment-field"}>
-                                                {order.comment}
-                                             </div>
-                                          </div>
                                        </div>
 
-                                       <div className="col-sm-6">
+                                       <div className="col-sm-12">
                                           <div>
                                              <div>
                                                 <h3>Shutters:</h3>
