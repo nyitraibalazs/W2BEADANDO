@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ShutterDataStore from "./../../store/ShutterStore"
+import ShutterData from "./../../store/ShutterStore"
 import ShutterDataActions from "./../../actions/ShutterActions"
 
 export class CustomerCreate extends Component {
@@ -8,9 +8,9 @@ export class CustomerCreate extends Component {
       super(props);
 
       this.state = {
-         shutterColors: ShutterDataStore._shutterColors,
-         shutterTypes: ShutterDataStore._shutterTypes,
-         shutterMaterials: ShutterDataStore._shutterMaterials,
+         shutterColors: ShutterData._shutterColors,
+         shutterTypes: ShutterData._shutterTypes,
+         shutterMaterials: ShutterData._shutterMaterials,
          order: {
             comment: "",
             windows: []
@@ -24,22 +24,22 @@ export class CustomerCreate extends Component {
       };
    }
 
-   onShutterColorsChange = () => {
-      this.setState({shutterColors : ShutterDataStore._shutterColors});
+   onColorsChange = () => {
+      this.setState({shutterColors : ShutterData._shutterColors});
    }
 
-   onShutterTypesChange = () => {
-      this.setState({shutterTypes : ShutterDataStore._shutterTypes});
+   onTypesChange = () => {
+      this.setState({shutterTypes : ShutterData._shutterTypes});
    }
 
-   onShutterMaterialsChange = () => {
-      this.setState({shutterMaterials : ShutterDataStore._shutterMaterials});
+   onMaterialsChange = () => {
+      this.setState({shutterMaterials : ShutterData._shutterMaterials});
    }
 
    componentDidMount() {
-      ShutterDataStore.addColorsChange(this.onShutterColorsChange);
-      ShutterDataStore.addTypesChange(this.onShutterTypesChange);
-      ShutterDataStore.addMaterialsChange(this.onShutterMaterialsChange);
+      ShutterData.addColorsChange(this.onColorsChange);
+      ShutterData.addTypesChange(this.onTypesChange);
+      ShutterData.addMaterialsChange(this.onMaterialsChange);
 
       if (this.state.shutterColors.length === 0) {
          ShutterDataActions.refreshShutterColors();
@@ -55,9 +55,9 @@ export class CustomerCreate extends Component {
    }
 
    componentWillUnmount() {
-      ShutterDataStore.removeColorsChange(this.onShutterColorsChange);
-      ShutterDataStore.removeTypesChange(this.onShutterTypesChange);
-      ShutterDataStore.removeMaterialsChange(this.onShutterMaterialsChange);
+      ShutterData.removeColorsChange(this.onColorsChange);
+      ShutterData.removeTypesChange(this.onTypesChange);
+      ShutterData.removeMaterialsChange(this.onMaterialsChange);
    }
 
    addNewShutter = () => {
@@ -207,17 +207,6 @@ export class CustomerCreate extends Component {
       )
    }
 
-   handleCommentChange = (event) => {
-      const newValue = event.target.value;
-
-      this.setState((prevState) => ({
-         ...prevState,
-         order: {
-            ...prevState.order,
-            comment: newValue
-         }
-      }))
-   }
 
    validateWindowWidth = (i)  => {
       const width = this.state.order.windows[i].width;
@@ -472,14 +461,6 @@ export class CustomerCreate extends Component {
                            <tr key={i}>
                               <td>
                                  <div>
-                                    <div
-                                       className={ this.state.error.order.windows[i].width === true
-                                          ? "form-group has-error"
-                                          : this.state.error.order.windows[i].width === false
-                                             ? "form-group has-success"
-                                             : "form-group"
-                                       }
-                                    >
                                        <div className="input-group">
                                           <input
                                              type="number"
@@ -490,25 +471,13 @@ export class CustomerCreate extends Component {
                                              className="form-control"
                                           />
 
-                                          <span className="input-group-addon">mm</span>
+
                                        </div>
-                                       {
-                                          this.state.error.order.windows[i].width &&
-                                          <div className="error-desc">Invalid value!</div>
-                                       }
-                                    </div>
                                  </div>
                               </td>
                               <td>
                                  <div>
-                                    <div
-                                       className={ this.state.error.order.windows[i].height === true
-                                          ? "form-group has-error"
-                                          : this.state.error.order.windows[i].height === false
-                                             ? "form-group has-success"
-                                             : "form-group"
-                                       }
-                                    >
+
                                        <div className="input-group">
                                           <input
                                              type="number"
@@ -518,24 +487,10 @@ export class CustomerCreate extends Component {
                                              onBlur={() => this.validateWindowHeight(i)}
                                              className="form-control"
                                           />
-
-                                          <span className="input-group-addon">mm</span>
                                        </div>
-                                       {
-                                          this.state.error.order.windows[i].height &&
-                                          <div className="error-desc">Invalid value!</div>
-                                       }
-                                    </div>
                                  </div>
                               </td>
                               <td>
-                                 <div className={ this.state.error.order.windows[i].shutter.color === true
-                                    ? "form-group has-error"
-                                    : this.state.error.order.windows[i].shutter.color === false
-                                       ? "form-group has-success"
-                                       : "form-group"
-                                 }
-                                 >
                                     <select
                                        className="form-control"
                                        value={window.shutter.color}
@@ -548,11 +503,6 @@ export class CustomerCreate extends Component {
                                           )
                                        }
                                     </select>
-                                    {
-                                       this.state.error.order.windows[i].shutter.color &&
-                                       <div className="error-desc">Invalid value!</div>
-                                    }
-                                 </div>
                               </td>
                               <td>
 
@@ -568,11 +518,6 @@ export class CustomerCreate extends Component {
                                           )
                                        }
                                     </select>
-                                    {
-                                       this.state.error.order.windows[i].shutter.material &&
-                                       <div className="error-desc">Invalid value!</div>
-                                    }
-
                               </td>
                               <td>
                                     <select
@@ -587,10 +532,6 @@ export class CustomerCreate extends Component {
                                           )
                                        }
                                     </select>
-                                    {
-                                       this.state.error.order.windows[i].shutter.type &&
-                                       <div className="error-desc">Invalid value!</div>
-                                    }
                               </td>
                               <td>
                                  <button

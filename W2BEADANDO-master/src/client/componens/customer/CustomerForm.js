@@ -189,14 +189,6 @@ export class CustomerForm extends Component {
       return (
 
          <form className="form-horizontal"  onSubmit={(e) => this.saveForm(e)}>
-            <div
-               className={ this.state.error.customerData.name === true
-                  ? "form-group has-error"
-                  : this.state.error.customerData.name === false
-                     ? "form-group has-success"
-                     : "form-group"
-               }
-            >
                <label className="control-label col-sm-1">Name:</label>
                <div className="col-sm-11">
                   <input
@@ -214,16 +206,7 @@ export class CustomerForm extends Component {
                      <div className="error-desc">Invalid value!</div>
                   }
                </div>
-            </div>
 
-            <div
-               className={ this.state.error.customerData.email === true
-                  ? "form-group has-error"
-                  : this.state.error.customerData.email === false
-                     ? "form-group has-success"
-                     : "form-group"
-               }
-            >
                <label className="control-label col-sm-1">Email:</label>
                <div className="col-sm-11">
                   <input
@@ -241,16 +224,8 @@ export class CustomerForm extends Component {
                      <div className="error-desc">Invalid value!</div>
                   }
                </div>
-            </div>
 
-            <div
-               className={ this.state.error.customerData.address === true
-                  ? "form-group has-error"
-                  : this.state.error.customerData.address === false
-                     ? "form-group has-success"
-                     : "form-group"
-               }
-            >
+
                <label className="control-label col-sm-1">Address:</label>
                <div className="col-sm-11">
                   <input
@@ -268,7 +243,6 @@ export class CustomerForm extends Component {
                      <div className="error-desc">Invalid value!</div>
                   }
                </div>
-            </div>
 
             <div className="form-group">
                <div className="col-sm-offset-1 col-sm-11">

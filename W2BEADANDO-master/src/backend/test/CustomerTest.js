@@ -1,5 +1,5 @@
 const assert = require('assert');
-const CustomerDataClass = require('../../CustomerData');
+const CustomerDataClass = require('../../backend/undef/CustomerData');
 
 describe('CustomerData class tests', () => {
     it('test CustomerDataFromJson with undefined', () => {
@@ -14,8 +14,8 @@ describe('CustomerData class tests', () => {
     it('test CustomerData with undefined name', () => {
         try {
             let name = undefined;
-            let email = "test@test.hu";
-            let address = "3555 Testland";
+            let email = "asdasd@asdasd.com";
+            let address = "Test";
             let customerData = new CustomerDataClass.CustomerData(name, email, address);
             assert.fail();
         } catch (error) {
@@ -25,9 +25,9 @@ describe('CustomerData class tests', () => {
 
     it('test CustomerData with undefined email', () => {
         try {
-            let name = "tester tester";
+            let name = "Asd Tester";
             let email = undefined;
-            let address = "3555 Testland";
+            let address = "Test";
             let customerData = new CustomerDataClass.CustomerData(name, email, address);
             assert.fail();
         } catch (error) {
@@ -37,8 +37,8 @@ describe('CustomerData class tests', () => {
 
     it('test CustomerData with undefined address', () => {
         try {
-            let name = "tester tester";
-            let email = "test@test.hu";
+            let name = "Testasd Tqwasd";
+            let email = "test@tester.hu";
             let address = undefined;
             let customerData = new CustomerDataClass.CustomerData(name, email, address);
             assert.fail();

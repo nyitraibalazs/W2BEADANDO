@@ -77,14 +77,7 @@ export class CreateInvoice extends Component {
       return (
          <div className="container-fluid invoice-form">
             <form  className="form-horizontal" onSubmit={(e) => this.saveForm(e)}>
-               <div
-                  className={ this.state.error.invoice.price === true
-                     ? "form-group has-error"
-                     : this.state.error.invoice.price === false
-                        ? "form-group has-success"
-                        : "form-group"
-                  }
-               >
+
                   <label className="control-label col-sm-1">Price:</label>
                   <div className="col-sm-11">
                      <input
@@ -100,7 +93,6 @@ export class CreateInvoice extends Component {
                         <div className="error-desc">Invalid value!</div>
                      }
                   </div>
-               </div>
 
 
                <div className="form-group">

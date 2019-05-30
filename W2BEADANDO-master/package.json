@@ -1,5 +1,5 @@
 {
-  "name": "webtech-2-assignment",
+  "name": "webtech-2-beadando",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts build && node src/backend/server.js",
-    "test": "mocha src/backend/test/**/*.js --timeout 20000 --require mocha-steps --exit && CI=true react-scripts test"
+    "test": "mocha src/backend/test/CustomerTest.js --timeout 20000 --require mocha-steps --exit && CI=true"
   },
   "eslintConfig": {
     "extends": "react-app"

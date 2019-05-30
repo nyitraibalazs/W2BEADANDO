@@ -56,13 +56,6 @@ export class WorkerPage extends Component {
       }
    }
 
-   toggleFilterUnfinished = () => {
-      this.setState((prevState) => ({
-         ...prevState,
-         filterUnfinished: !prevState.filterUnfinished
-      }))
-   }
-
    render() {
       return (
          <div className="container-fluid">
@@ -135,7 +128,7 @@ export class WorkerPage extends Component {
                                                                   className="btn btn-primary btn-block"
                                                                   onClick={() => this.setSelectedShutter(order._id, window.shutter.id)}
                                                                >
-                                                                  {isSelectedShutter ? "Hide parts" : "List parts"}
+                                                                  {isSelectedShutter ? "Close" : "Open"}
                                                                </button>
                                                             </td>
                                                          </tr>
@@ -175,7 +168,7 @@ export class WorkerPage extends Component {
                                                                               className="btn btn-primary btn-block"
                                                                               onClick={() => this.finishShutter(order._id, window.shutter.id)}
                                                                            >
-                                                                              Finish job
+                                                                              Send payment for client
                                                                            </button>
                                                                         </div>
                                                                      }

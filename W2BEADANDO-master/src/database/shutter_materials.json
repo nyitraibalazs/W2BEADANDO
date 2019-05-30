@@ -1,5 +1,5 @@
-[{"_id": {"$oid": "JStJQjEr4rzJtPJeS5DqybZ1"}, "material": "aluminium"},
-{"_id": {"$oid": "JStJQjEr4rzJtPJeS5DqybZ2"}, "material": "metaltest"},
-{"_id": {"$oid": "JStJQjEr4rzJtPJeS5DqybZ3"}, "material": "plastic"}
+[{"_id": {"$oid": "123456789789123456789720"}, "material": "aluminium"},
+{"_id": {"$oid": "123456789789123456789721"}, "material": "metaltest"},
+{"_id": {"$oid": "123456789789123456789722"}, "material": "plastic"}
 ]
 

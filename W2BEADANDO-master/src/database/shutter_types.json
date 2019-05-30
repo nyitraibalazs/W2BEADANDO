@@ -1,5 +1,5 @@
 [
-{"_id": {"$oid": "42n64KasELtuSTtdm5sHEMC1"}, "type": "two x two"},
-{"_id": {"$oid": "42n64KasELtuSTtdm5sHEMC2"}, "type": "three x three"}
+{"_id": {"$oid": "123456789789123456789730"}, "type": "Spectus"},
+{"_id": {"$oid": "123456789789123456789731"}, "type": "Veka"}
 ]
 
