@@ -24,13 +24,13 @@ export class CustomerPage extends Component {
    }
 
    componentDidMount() {
-      CostumerDataStore.addCostumerDataChangeListener(this.onCostumerDataChange);
-      CostumerDataStore.addOwnOrdersChangeListener(this.onOwnOrdersChange);
+      CostumerDataStore.addCostumerChange(this.onCostumerDataChange);
+      CostumerDataStore.addOrdersChange(this.onOwnOrdersChange);
    }
 
    componentWillUnmount() {
-      CostumerDataStore.removeCostumerDataChangeListener(this.onCostumerDataChange);
-      CostumerDataStore.removeOwnOrdersChangeListener(this.onOwnOrdersChange);
+      CostumerDataStore.removeCostumerChange(this.onCostumerDataChange);
+      CostumerDataStore.removeOrdersChange(this.onOwnOrdersChange);
    }
 
    render() {

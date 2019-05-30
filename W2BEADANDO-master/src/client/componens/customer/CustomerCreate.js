@@ -37,9 +37,9 @@ export class CustomerCreate extends Component {
    }
 
    componentDidMount() {
-      ShutterDataStore.addShutterColorsChangeListener(this.onShutterColorsChange);
-      ShutterDataStore.addShutterTypesChangeListener(this.onShutterTypesChange);
-      ShutterDataStore.addShutterMaterialsChangeListener(this.onShutterMaterialsChange);
+      ShutterDataStore.addColorsChange(this.onShutterColorsChange);
+      ShutterDataStore.addTypesChange(this.onShutterTypesChange);
+      ShutterDataStore.addMaterialsChange(this.onShutterMaterialsChange);
 
       if (this.state.shutterColors.length === 0) {
          ShutterDataActions.refreshShutterColors();
@@ -55,9 +55,9 @@ export class CustomerCreate extends Component {
    }
 
    componentWillUnmount() {
-      ShutterDataStore.removeShutterColorsChangeListener(this.onShutterColorsChange);
-      ShutterDataStore.removeShutterTypessChangeListener(this.onShutterTypesChange);
-      ShutterDataStore.removeShutterMaterialsChangeListener(this.onShutterMaterialsChange);
+      ShutterDataStore.removeColorsChange(this.onShutterColorsChange);
+      ShutterDataStore.removeTypesChange(this.onShutterTypesChange);
+      ShutterDataStore.removeMaterialsChange(this.onShutterMaterialsChange);
    }
 
    addNewShutter = () => {

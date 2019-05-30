@@ -4,27 +4,27 @@ class CustomerStore extends EventEmitter{
    _costumerData = undefined;
    _ownOrders = [];
 
-   emitCostumerDataChange(){
+   CostumerChange(){
       this.emit('costumer-data-change');
    }
 
-   addCostumerDataChangeListener(callback) {
+   addCostumerChange(callback) {
       this.addListener('costumer-data-change', callback);
    }
 
-   removeCostumerDataChangeListener(callback) {
+   removeCostumerChange(callback) {
       this.removeListener('costumer-data-change', callback);
    }
 
-   emitOwnOrdersChange(){
+   OrdersChange(){
       this.emit('own-orders-change');
    }
 
-   addOwnOrdersChangeListener(callback) {
+   addOrdersChange(callback) {
       this.addListener('own-orders-change', callback);
    }
 
-   removeOwnOrdersChangeListener(callback) {
+   removeOrdersChange(callback) {
       this.removeListener('own-orders-change', callback);
    }
 }

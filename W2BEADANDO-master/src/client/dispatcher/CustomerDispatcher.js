@@ -26,8 +26,8 @@ dispatcher.register((data) => {
       .then((response) => {
          CustomerStore._costumerData = data.action.payload;
          CustomerStore._ownOrders = response.data.orders;
-         CustomerStore.emitCostumerDataChange();
-         CustomerStore.emitOwnOrdersChange();
+         CustomerStore.CostumerChange();
+         CustomerStore.OrdersChange();
       })
 });
 
@@ -38,8 +38,8 @@ dispatcher.register((data) => {
 
    CustomerStore._costumerData = undefined;
    CustomerStore._ownOrders = [];
-   CustomerStore.emitCostumerDataChange();
-   CustomerStore.emitOwnOrdersChange();
+   CustomerStore.CostumerChange();
+   CustomerStore.OrdersChange();
 });
 
 dispatcher.register((data) => {
@@ -52,7 +52,7 @@ dispatcher.register((data) => {
    })
       .then((response) => {
          CustomerStore._ownOrders = response.data.orders;
-         CustomerStore.emitOwnOrdersChange();
+         CustomerStore.OrdersChange();
       })
 });
 

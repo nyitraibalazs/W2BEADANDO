@@ -5,39 +5,39 @@ class ShutterStore extends EventEmitter {
    _shutterTypes = [];
    _shutterMaterials = [];
 
-   emitShutterColorsChange() {
+   ColorsChange() {
       this.emit('shutter-colors-change');
    }
 
-   addShutterColorsChangeListener(callback) {
+   addColorsChange(callback) {
       this.addListener('shutter-colors-change', callback);
    }
 
-   removeShutterColorsChangeListener(callback) {
+   removeColorsChange(callback) {
       this.removeListener('shutter-colors-change', callback);
    }
 
-   emitShutterTypesChange() {
+   TypesChange() {
       this.emit('shutter-types-change');
    }
 
-   addShutterTypesChangeListener(callback) {
+   addTypesChange(callback) {
       this.addListener('shutter-types-change', callback);
    }
 
-   removeShutterTypessChangeListener(callback) {
+   removeTypesChange(callback) {
       this.removeListener('shutter-types-change', callback);
    }
 
-   emitShutterMaterialsChange() {
+   MaterialsChange() {
       this.emit('shutter-materials-change');
    }
 
-   addShutterMaterialsChangeListener(callback) {
+   addMaterialsChange(callback) {
       this.addListener('shutter-materials-change', callback);
    }
 
-   removeShutterMaterialsChangeListener(callback) {
+   removeMaterialsChange(callback) {
       this.removeListener('shutter-materials-change', callback);
    }
 }

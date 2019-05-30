@@ -1,9 +1,9 @@
 [{
 	"_id": {
-		"$oid": "5cd1799831d75331588dc9bd"
+		"$oid": "CSuGZjuuvvNWscSF2UxEptDN"
 	},
 	"customerData": {
-		"name": "Kis Pál",
+		"name": "Nyitrai Balázs",
 		"email": "kispal@mail.com",
 		"address": "3525 Msikolc Hősök tere 1."
 	},
@@ -39,7 +39,7 @@
 },
 	{
 		"_id": {
-			"$oid": "5cd1799831d75331588dc9be"
+			"$oid": "guTCVPkbrmdCYVqXfbz797Dx"
 		},
 		"customerData": {
 			"name": "Kis Pál",

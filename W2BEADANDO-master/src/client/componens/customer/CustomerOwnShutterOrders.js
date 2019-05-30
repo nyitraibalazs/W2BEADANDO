@@ -8,7 +8,7 @@ export class CustomerOwnShutterOrders extends Component {
             <ul className="list-group">
                {
                   this.props.ownOrders.length === 0 &&
-                  <div>Sorry no orders yet</div>
+                  <div>no orders</div>
                }
                {
                   this.props.ownOrders.map((order, i) =>

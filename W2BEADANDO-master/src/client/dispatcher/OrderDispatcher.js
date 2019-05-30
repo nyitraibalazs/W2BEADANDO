@@ -32,9 +32,9 @@ dispatcher.register((data) => {
          })
             .then((response) => {
                CustomerStore._ownOrders = [...CustomerStore._ownOrders, response.data.order];
-               CustomerStore.emitOwnOrdersChange();
+               CustomerStore.OrdersChange();
                OrderStore._allOrders = [...OrderStore._allOrders, response.data.order];
-               OrderStore.emitAllOrdersChange();
+               OrderStore.AllOrdersChange();
             })
       })
 
@@ -49,7 +49,7 @@ dispatcher.register((data) => {
       .then((response) => {
          OrderStore._allOrders = response.data.orders;
          OrderStore._isAllOrdersFecthed = true;
-         OrderStore.emitAllOrdersChange();
+         OrderStore.AllOrdersChange();
       })
 });
 
@@ -75,7 +75,7 @@ dispatcher.register((data) => {
          })
 
          OrderStore._allOrders = allOrders;
-         OrderStore.emitAllOrdersChange();
+         OrderStore.AllOrdersChange();
 
          let ownOrders = [...CustomerStore._ownOrders];
          ownOrders.forEach((order) => {
@@ -89,7 +89,7 @@ dispatcher.register((data) => {
          })
 
          CustomerStore._ownOrders = ownOrders;
-         CustomerStore.emitOwnOrdersChange();
+         CustomerStore.OrdersChange();
       })
 });
 
@@ -110,7 +110,7 @@ dispatcher.register((data) => {
          })
 
          OrderStore._allOrders = allOrders;
-         OrderStore.emitAllOrdersChange();
+         OrderStore.AllOrdersChange();
 
          let ownOrders = [...CustomerStore._ownOrders];
          ownOrders.forEach((order) => {
@@ -120,7 +120,7 @@ dispatcher.register((data) => {
          })
 
          CustomerStore._ownOrders = ownOrders;
-         CustomerStore.emitOwnOrdersChange();
+         CustomerStore.OrdersChange();
       })
 });
 
@@ -142,7 +142,7 @@ dispatcher.register((data) => {
          })
 
          OrderStore._allOrders = allOrders;
-         OrderStore.emitAllOrdersChange();
+         OrderStore.AllOrdersChange();
 
          let ownOrders = [...CustomerStore._ownOrders];
          ownOrders.forEach((order) => {
@@ -152,7 +152,7 @@ dispatcher.register((data) => {
          })
 
          CustomerStore._ownOrders = ownOrders;
-         CustomerStore.emitOwnOrdersChange();
+         CustomerStore.OrdersChange();
       })
 });
 

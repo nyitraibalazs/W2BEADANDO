@@ -1,5 +1,5 @@
-[{"_id": {"$oid": "5cd1799731d45831588dc9ba"}, "material": "aluminium"},
-{"_id": {"$oid": "5cd1799731d75331688dc9bb"}, "material": "metaltest"},
-{"_id": {"$oid": "5cd1799731d75335588dc9bc"}, "material": "plastic"}
+[{"_id": {"$oid": "JStJQjEr4rzJtPJeS5DqybZ1"}, "material": "aluminium"},
+{"_id": {"$oid": "JStJQjEr4rzJtPJeS5DqybZ2"}, "material": "metaltest"},
+{"_id": {"$oid": "JStJQjEr4rzJtPJeS5DqybZ3"}, "material": "plastic"}
 ]
 

@@ -4,15 +4,15 @@ class OrderStore extends EventEmitter{
    _allOrders = [];
    _isAllOrdersFecthed = false;
 
-   emitAllOrdersChange() {
+   AllOrdersChange() {
       this.emit('all-orders-change');
    }
 
-   addAllOrdersChangeListener(callback) {
+   addAllOrdersChange(callback) {
       this.addListener('all-orders-change', callback);
    }
 
-   removeAllOrdersChangeListener(callback) {
+   removeAllOrdersChange(callback) {
       this.removeListener('all-orders-change', callback);
    }
 }

@@ -20,14 +20,14 @@ export class ManagerPage extends Component {
    }
 
    componentDidMount() {
-      OrderStore.addAllOrdersChangeListener(this.onAllOrdersChange);
+      OrderStore.addAllOrdersChange(this.onAllOrdersChange);
       if (OrderStore._isAllOrdersFecthed === false) {
          OrderActions.refreshAllOrders();
       }
    }
 
    componentWillUnmount() {
-      OrderStore.removeAllOrdersChangeListener(this.onAllOrdersChange);
+      OrderStore.removeAllOrdersChange(this.onAllOrdersChange);
    }
 
    setFilter = (event) => {
@@ -105,10 +105,6 @@ export class ManagerPage extends Component {
                <div className="text-center header-text">
                   <h1>
                      Manager page
-                     <span>
-                            &nbsp;
-                        <i className="header-icon fas fa-sync" onClick={() => {OrderActions.refreshAllOrders();}} />
-                        </span>
                   </h1>
                </div>
 
@@ -116,7 +112,7 @@ export class ManagerPage extends Component {
                  <ul className="list-group margin-top-30">
                      {
                         this.state.allOrders.length === 0 &&
-                        <div>Sorry no orders yet</div>
+                        <div>no orders</div>
                      }
                      {
                         this.getFilteredOrders()
