@@ -30,15 +30,6 @@ export class ManagerPage extends Component {
       OrderStore.removeAllOrdersChange(this.onAllOrdersChange);
    }
 
-   setFilter = (event) => {
-      const value = event.target.value;
-
-      this.setState((prevState) => ({
-         ...prevState,
-         filter: value
-      }))
-   }
-
    getOrderStatus = (order) => {
       let isUnassembled = false;
       order.windows.forEach((window) => {

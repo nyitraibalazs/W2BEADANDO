@@ -15,14 +15,6 @@ export class CustomerPage extends Component {
       };
    }
 
-   onCostumerDataChange = () => {
-      this.setState({customerData : CostumerDataStore._costumerData});
-   }
-
-   onOwnOrdersChange = () => {
-      this.setState({ownOrders : CostumerDataStore._ownOrders});
-   }
-
    componentDidMount() {
       CostumerDataStore.addCostumerChange(this.onCostumerDataChange);
       CostumerDataStore.addOrdersChange(this.onOwnOrdersChange);
@@ -32,6 +24,16 @@ export class CustomerPage extends Component {
       CostumerDataStore.removeCostumerChange(this.onCostumerDataChange);
       CostumerDataStore.removeOrdersChange(this.onOwnOrdersChange);
    }
+
+
+   onCostumerDataChange = () => {
+      this.setState({customerData : CostumerDataStore._costumerData});
+   }
+
+   onOwnOrdersChange = () => {
+      this.setState({ownOrders : CostumerDataStore._ownOrders});
+   }
+
 
    render() {
       return (

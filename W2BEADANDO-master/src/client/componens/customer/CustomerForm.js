@@ -170,11 +170,7 @@ export class CustomerForm extends Component {
 
    validateForm = () => {
       let isValid = true;
-
-      isValid = this.validateName() && isValid;
-      isValid = this.validateEmail() && isValid;
-      isValid = this.validateAddress() && isValid;
-
+      isValid = this.validateName() && isValid && this.validateEmail() && this.validateAddress();
       return isValid;
    }
 
@@ -201,10 +197,6 @@ export class CustomerForm extends Component {
                      onBlur={this.validateName}
                      className={"form-control"}
                   />
-                  {
-                     this.state.error.customerData.name &&
-                     <div className="error-desc">Invalid value!</div>
-                  }
                </div>
 
                <label className="control-label col-sm-1">Email:</label>
@@ -219,10 +211,6 @@ export class CustomerForm extends Component {
                      onBlur={this.validateEmail}
                      className={"form-control"}
                   />
-                  {
-                     this.state.error.customerData.email &&
-                     <div className="error-desc">Invalid value!</div>
-                  }
                </div>
 
 
@@ -238,10 +226,6 @@ export class CustomerForm extends Component {
                      onBlur={this.validateAddress}
                      className={"form-control"}
                   />
-                  {
-                     this.state.error.customerData.address &&
-                     <div className="error-desc">Invalid value!</div>
-                  }
                </div>
 
             <div className="form-group">
